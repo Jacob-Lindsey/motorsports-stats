@@ -1,0 +1,19 @@
+.container {
+    border: 1px solid rgba(217, 217, 217, 0.175);
+    margin-top: 2rem;
+    padding: 0.25rem;
+    width: 96%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0.25rem 1rem;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
