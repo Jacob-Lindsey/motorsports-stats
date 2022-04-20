@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IconButton, styled } from "@mui/material";
 import { Box, Button, Card as CardElement, CardActions, CardContent, CardHeader, CardMedia, Collapse, Typography } from "@mui/material";
 import { ExpandMore as ExpandMoreIcon, MoreVert } from "@mui/icons-material";
-import fallbackImage from "../../../public/fallback-image.png";
+import fallbackImage from "/fallback-image.png";
 import styles from "./Card.module.css";
 
 const Card = (driver) => {
@@ -48,13 +48,17 @@ const Card = (driver) => {
                 sx={{
                     backgroundColor: 'hsl(260, 4%, 21%)',
                     borderRadius: '0.3rem',
-                    maxWidth: '400px',
-                    padding: '0.4rem'
+                    padding: '0.4rem',
+                    width: {
+                        mobile: '100%',
+                        tablet: '400px',
+                    }
                 }}
             >
                 <CardElement sx={{ maxWidth: 400 }}>
                     <CardHeader 
                         title={`${givenName} ${familyName}`}
+                        style={{ fontFamily: 'Formula1-Bold' }}
                     />
                     <CardMedia 
                         component="img"

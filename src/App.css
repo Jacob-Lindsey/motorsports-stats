@@ -2,3 +2,13 @@
   display: flex;
   justify-content: center;
 }
+
+.MuiCardMedia-root {
+  object-fit: fill;
+  padding: 0.5rem;
+}
+
+.MuiCardHeader-content .MuiTypography-root {
+  font-family: 'Formula1-Bold' !important;
+  font-size: 2rem;
+}

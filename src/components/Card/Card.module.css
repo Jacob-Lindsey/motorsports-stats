@@ -1,3 +1,14 @@
 .container {
     padding-top: 2rem;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container .MuiBox-root {
+        width: 400px;
+    }
+}

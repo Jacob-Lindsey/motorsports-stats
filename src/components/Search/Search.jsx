@@ -37,7 +37,12 @@ const Search = () => {
                 isOptionEqualToValue={(option, value) => 
                     option.toLowerCase().includes(value.toLowerCase())
                 }
-                sx={{ width: 400 }}
+                sx={{
+                    width: {
+                        mobile: '100%',
+                        tablet: '100%',
+                    }
+                }}
                 renderInput={(params) => (
                     <TextField
                         {...params}
@@ -48,7 +53,6 @@ const Search = () => {
             />
             { selectedOption ?
                 <Card driver={selectedOption} />
-                
                 : null
             }
         </div>

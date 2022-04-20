@@ -4,6 +4,14 @@ import Search from "./components/Search/Search";
 import './App.css';
 
 const darkTheme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 769,
+      laptop: 1024,
+      desktop: 1200,
+    },
+  },
   palette: {
     mode: 'dark',
   },
