@@ -1,7 +1,7 @@
 .container {  
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: 100px 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -17,15 +17,17 @@
 .toolbar,
 .main {
     border: 1px solid hsla(0, 0%, 76%, 0.342);
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .sidebar {
     grid-area: sidebar;
+    justify-content: end;
 }
   
 .toolbar { 
     grid-area: toolbar;
+    padding: 0.25rem 1rem 1rem 1rem;
 }
   
 .main { 

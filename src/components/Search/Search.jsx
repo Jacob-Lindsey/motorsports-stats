@@ -39,16 +39,33 @@ const Search = () => {
                     option.toLowerCase().includes(value.toLowerCase())
                 }
                 sx={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    height: '100%',
                     width: {
                         mobile: '100%',
-                        tablet: '100%',
+                        tablet: '30%',
                     }
                 }}
                 renderInput={(params) => (
                     <TextField
                         {...params}
+                        variant="standard"
                         fullWidth
-                        label="Find a driver"
+                        InputProps={{
+                            ...params.InputProps,
+                            disableUnderline: true,
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <SearchIcon />
+                                </InputAdornment>
+                            )
+                        }}
+
+                        /* {...params}
+                        fullWidth
+                        hiddenLabel
+                        placeholder="Find a driver"
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="start">
@@ -57,7 +74,7 @@ const Search = () => {
                             ),
                             disableUnderline: true,
                         }}
-                        variant="standard"
+                        variant="standard" */
                     />
                 )}
             />
