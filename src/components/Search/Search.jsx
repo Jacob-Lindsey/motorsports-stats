@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, InputAdornment, TextField } from "@mui/material";
+import { Search as SearchIcon } from "@mui/icons-material";
 import Card from "../Card/Card";
 import { getDriverSuggestion } from "../../utils/getDriverSuggestion";
 import styles from "./Search.module.css";
@@ -46,8 +47,17 @@ const Search = () => {
                 renderInput={(params) => (
                     <TextField
                         {...params}
+                        fullWidth
                         label="Find a driver"
-                        variant="outlined"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="start">
+                                    <SearchIcon />
+                                </InputAdornment>
+                            ),
+                            disableUnderline: true,
+                        }}
+                        variant="standard"
                     />
                 )}
             />

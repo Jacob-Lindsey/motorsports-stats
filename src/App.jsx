@@ -1,4 +1,5 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Layout from "./components/Layout/Layout";
 import Chart from "./components/Chart/Chart";
 import Search from "./components/Search/Search";
 import './App.css';
@@ -21,7 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <div className="App">
-        <Search />
+        <Layout />
       </div>
     </ThemeProvider>
   );
